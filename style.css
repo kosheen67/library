@@ -337,7 +337,7 @@ main {
     line-height: normal;
     display: flex;
     gap: 90px;
-    margin-top: 35px;
+    margin-top: 42px;
 }
 
 .seasons-input {
@@ -350,4 +350,107 @@ main {
 
 .seasons-label span {
     padding-left: 20px;
+}
+
+.winter-books-list {
+    margin: 40px 69px 40px 69px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.winter-books {
+    border: 1px solid #000;
+    background: #FFF;
+    position: sticky;
+    z-index: 1;
+    position: relative;
+    min-height: 555px;
+}
+
+.staff-picks {
+    color: #000;
+    font-family: Forum, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.staff-picks:after {
+    content: '';
+    background-color: #BB945F;
+    width: 55px;
+    height: 1px;
+    display: block;
+}
+
+.winter-books-header {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 19px;
+    margin-left: 20px;
+}
+
+.winter-books-author {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+.winter-books-description {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    width: 355px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.winter-books-image {
+    position: absolute;
+    bottom: 0px;
+    right: -41px;
+    z-index: 2;
+}
+
+.favourites-button {
+    width: 75px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+    bottom: 16px;
+    background-color: #FFF;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
 }
