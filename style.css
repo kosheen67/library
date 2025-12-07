@@ -175,7 +175,8 @@ main {
 
 .about-header,
 .favourites-header,
-.coffeeShop-header {
+.coffeeShop-header,
+.contacts-header {
     text-align: center;
     color: #0C0C0E;
     font-family: Forum, serif;
@@ -573,4 +574,57 @@ main {
 
 .desserts {
     align-self: flex-end;
+}
+
+/* Section Contacts */
+.contacts {
+    min-height: 1055px;
+    background-color: #FFF;
+    padding: 0px 20px 40px;
+}
+
+.contacts-header {
+    margin-top: 11px;
+}
+
+.contacts-header::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;
+    background: #0C0C0E;
+    margin-top: 20px;
+}
+
+.contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    border: 1px solid red;
+    min-height: 894px;
+}
+
+.contacts-text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-height: 380px;
+}
+
+.contacts-text-list {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-text-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
