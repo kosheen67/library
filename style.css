@@ -176,7 +176,8 @@ main {
 .about-header,
 .favourites-header,
 .coffeeShop-header,
-.contacts-header {
+.contacts-header,
+.library-card-header {
     text-align: center;
     color: #0C0C0E;
     font-family: Forum, serif;
@@ -601,7 +602,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 100px;
-    border: 1px solid red;
     min-height: 894px;
 }
 
@@ -627,4 +627,229 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* Section Library Card Form */
+.library-card-header {
+    margin-top: 10px;
+}
+
+.library-card-header::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;
+    background: #0C0C0E;
+    margin-top: 20px;
+}
+
+.library-card {
+    min-height: 857px;
+    background-color: #FFF;
+    padding: 0px 20px 40px;
+    border: 0;
+}
+
+.library-card-form fieldset {
+    border: 0;
+}
+
+.library-form-header {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-content {
+    width: 600px;
+    min-height: 387px;
+    border: 3px solid #BB945F;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-content-fields {
+    min-width: 560px;
+    min-height: 272px;
+    background: #BB945F;
+    padding: 20px;
+}
+
+.form-content-header {
+    color: #000;
+    font-family: Forum, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    margin-bottom: 20px;
+}
+
+.readers-name,
+.card-number {
+    width: 520px;
+    height: 66px;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+}
+
+::placeholder {
+    color: #8E8E8E;
+    font-family: Forum, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    padding-left: 20px;
+}
+
+.card-number {
+    margin-top: 25px;
+}
+
+.check-card {
+    width: 242px;
+    height: 44px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-top: 43px;
+    margin-left: 140px;
+}
+
+.get-a-card-header {
+    color: #000;
+    font-family: Forum, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.get-a-card-text {
+    color: #000;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+    margin-bottom: 40px;
+}
+
+.get-a-card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.get-a-card-sign-up,
+.get-a-card-log-in {
+    border: 1px solid #0c0c0e;
+    padding: 9px;
+    min-width: 70px;
+    min-height: 30px;
+    box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+    min-height: 250px;
+    background-color: #0C0C0E;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 44px;
+}
+
+.top-part-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-text {
+    width: 229px;
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.top-part-footer .right-text {
+    color: #FFF;
+    text-align: right;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.library-address {
+    text-decoration: none;
+}
+
+
+.middle-part-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right-text2 {
+    width: 149px;
+    color: #FFF;
+    text-align: right;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: -5px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: 0px;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    list-style-type: none;
+}
+
+hr {
+    width: 728px;
+    height: 1px;
+    background: #FFF;
+    margin-top: 20px;
 }
