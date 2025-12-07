@@ -174,7 +174,8 @@ main {
 }
 
 .about-header,
-.favourites-header {
+.favourites-header,
+.coffeeShop-header {
     text-align: center;
     color: #0C0C0E;
     font-family: Forum, serif;
@@ -184,9 +185,9 @@ main {
     line-height: 40px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    margin-top: 17px;
+    margin-top: 37px;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
     padding: 0;
 }
 
@@ -453,4 +454,123 @@ main {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
+}
+
+/* Coffee Shop section */
+.coffeeShop {
+    min-height: 1481px;
+    background-color: #FFF;
+    padding: 15px 20px 40px;
+}
+
+.coffeeShop-header::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;
+    background: #0C0C0E;
+    margin-top: 20px;
+}
+
+.coffeeShop-text {
+    color: #000;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 39px;
+    ;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-height: 1080px;
+}
+
+.menu-category {
+    min-width: 438px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.category-list-item {
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.header-drinks,
+.header-desserts {
+    color: #BB945F;
+    font-family: Forum, serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+.drink {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+.drink::after {
+    content: '';
+    width: 100px;
+    background-color: #BB945F;
+    height: 1px;
+    display: block;
+    margin-top: -20px;
+    margin-left: 256px;
+}
+
+.drink-price {
+    color: #000;
+    font-family: Forum, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+.drinks {
+    align-self: flex-start;
+}
+
+.desserts {
+    align-self: flex-end;
 }
