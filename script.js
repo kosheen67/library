@@ -103,7 +103,6 @@ paginationButtons.forEach((button, index) => {
 
 
 //Функция смены блоков с книгами по сезонам
-const seasonRadios = document.querySelectorAll('input[name="season"]'); //Найти все радио-кнопки сезонов
 const winterBooks = document.querySelector('.winter-books-list');
 const springBooks = document.querySelector('.spring-books-list');
 const summerBooks = document.querySelector('.summer-books-list');
@@ -120,7 +119,7 @@ radios.forEach((radio) => {
         if (winterBooks) winterBooks.classList.add('visually-hidden');
         if (springBooks) springBooks.classList.add('visually-hidden');
         if (summerBooks) summerBooks.classList.add('visually-hidden');
-        if (autumnBooks) summerBooks.classList.add('visually-hidden');
+        if (autumnBooks) autumnBooks.classList.add('visually-hidden');
 
         if (this.value === 'winter') {
             winterBooks.classList.remove('visually-hidden');
