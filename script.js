@@ -100,3 +100,42 @@ paginationButtons.forEach((button, index) => {
         goToSlideOnPaginationClick(index);
     });
 });
+
+
+//Функция смены блоков с книгами по сезонам
+const seasonRadios = document.querySelectorAll('input[name="season"]'); //Найти все радио-кнопки сезонов
+const winterBooks = document.querySelector('.winter-books-list');
+const springBooks = document.querySelector('.spring-books-list');
+const summerBooks = document.querySelector('.summer-books-list');
+const autumnBooks = document.querySelector('.autumn-books-list');
+
+
+const radios = document.querySelectorAll('.seasons-input')
+
+
+if (winterBooks) winterBooks.classList.remove('visually-hidden');
+
+radios.forEach((radio) => {
+    radio.addEventListener('change', function () {
+        if (winterBooks) winterBooks.classList.add('visually-hidden');
+        if (springBooks) springBooks.classList.add('visually-hidden');
+        if (summerBooks) summerBooks.classList.add('visually-hidden');
+        if (autumnBooks) summerBooks.classList.add('visually-hidden');
+
+        if (this.value === 'winter') {
+            winterBooks.classList.remove('visually-hidden');
+        }
+
+        if (this.value === 'spring') {
+            springBooks.classList.remove('visually-hidden');
+        }
+
+        if (this.value === 'summer') {
+            summerBooks.classList.remove('visually-hidden');
+        }
+
+        if (this.value === 'autumn') {
+            autumnBooks.classList.remove('visually-hidden');
+        }
+    })
+})

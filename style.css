@@ -353,9 +353,13 @@ main {
 
 .seasons-label span {
     padding-left: 20px;
+    cursor: pointer;
 }
 
-.winter-books-list {
+.winter-books-list,
+.spring-books-list,
+.summer-books-list,
+.autumn-books-list {
     margin: 40px 69px 40px 69px;
     max-width: 550px;
     display: flex;
@@ -363,7 +367,10 @@ main {
     gap: 40px;
 }
 
-.winter-books {
+.winter-books,
+.spring-books,
+.summer-books,
+.autumn-books {
     border: 1px solid #000;
     background: #FFF;
     position: sticky;
@@ -393,7 +400,10 @@ main {
     display: block;
 }
 
-.winter-books-header {
+.winter-books-header,
+.spring-books-header,
+.summer-books-header,
+.autumn-books-header {
     color: #000;
     font-family: Inter, sans-serif;
     font-size: 15px;
@@ -406,7 +416,10 @@ main {
     margin-left: 20px;
 }
 
-.winter-books-author {
+.winter-books-author,
+.spring-books-author,
+.summer-books-author,
+.autumn-books-author {
     color: #000;
     font-family: Inter, sans-serif;
     font-size: 15px;
@@ -418,7 +431,10 @@ main {
     margin-left: 20px;
 }
 
-.winter-books-description {
+.winter-books-description,
+.spring-books-description,
+.summer-books-description,
+.autumn-books-description {
     color: #000;
     font-family: Inter, sans-serif;
     font-size: 15px;
@@ -432,7 +448,10 @@ main {
     margin-top: 20px;
 }
 
-.winter-books-image {
+.winter-books-image,
+.spring-books-image,
+.summer-books-image,
+.autumn-books-image {
     position: absolute;
     bottom: 0px;
     right: -41px;
