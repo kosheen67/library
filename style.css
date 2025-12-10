@@ -75,6 +75,26 @@ header {
 
 .icon-profile {
     margin-right: 40px;
+    cursor: pointer;
+}
+
+/* Стиль для аватарки с инициалами */
+.profile-initials {
+    width: 28px;
+    height: 28px;
+    background-color: #0C0C0E;
+    /* тёмный фон, как у Brooklyn Library */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 25px;
 }
 
 .menu-toggle {
@@ -98,6 +118,394 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Модальное окно профиля */
+.modal-profile {
+    display: none;
+    background-color: #ffffff;
+    min-height: 115px;
+    min-width: 80px;
+    position: absolute;
+    padding: 5px 10px 20px;
+    top: 30px;
+    right: 80px;
+}
+
+.modal-profile-content {
+    position: absolute;
+    margin: 0 auto;
+    top: 0px;
+}
+
+.modal-profile__close {
+    position: absolute;
+    right: -7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.profile-list-item:first-child {
+    color: #000000;
+    font-family: Inter-Bold, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.profile-list-item:first-child::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #BB945F;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-list-item:nth-child(2) {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-list-item:nth-child(2),
+.profile-list-item:nth-child(3) {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.profile-list-link {
+    cursor: pointer;
+}
+
+/* Модальное окно регистрации */
+.modal-register {
+    display: none;
+    background-color: #ffffff;
+    min-height: 382px;
+    width: 250px;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+.register-form {
+    padding: 25px 20px;
+}
+
+.register-form-group {
+    border: none;
+    position: relative;
+}
+
+.register-close-button {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.register-form-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: Forum, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.register-form-group label {
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.register-form-group input {
+    border: 1px solid #BB945F;
+    min-height: 20px;
+    width: 200px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.signupButton {
+    font-family: Inter Bold, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0C0C0E;
+    border: 1px solid #0C0C0E;
+    border-radius: 2px;
+    min-height: 30px;
+    width: 75px;
+}
+
+.login-text {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.login-link {
+    text-decoration: underline;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0C0C0E;
+}
+
+/* Модальное окно входа */
+.modal-login {
+    background-color: #ffffff;
+    min-height: 262px;
+    width: 250px;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    display: none;
+}
+
+.modal-login__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.login-form {
+    padding: 25px 20px;
+}
+
+.login-form-group {
+    border: none;
+    position: relative;
+}
+
+.login-form-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: Forum, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form-group label {
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.login-form-group input {
+    border: 1px solid #BB945F;
+    min-height: 20px;
+    width: 200px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+
+.logInButton {
+    font-family: Inter Bold, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0C0C0E;
+    border: 1px solid #0C0C0E;
+    border-radius: 2px;
+    min-height: 30px;
+    width: 75px;
+}
+
+
+.register-text {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.register-link {
+    text-decoration: underline;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0C0C0E;
+}
+
+/* Модальное окно: Личный кабинет читателя */
+.modal-profile-cabinet {
+    display: none;
+    min-height: 400px;
+    width: 600px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+.profile-cabinet-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-cabinet-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.profile-cabinet-leftSide {
+    width: 170px;
+    min-height: 400px;
+    background-color: #0C0C0E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabinet-initials {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.cabinet-initials-text {
+    color: #BB945F;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    display: block;
+    margin: 0 auto;
+}
+
+.cabinet-initials-fullText {
+    width: 120px;
+    min-height: 30px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.cabinet-initials-full {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    display: block;
+    margin: 0 auto;
+    color: #000000;
+    padding: 20px;
+}
+
+.profile-cabinet-rightSide {
+    padding: 40px 20px;
+}
+
+.cabinet-rightSide-header {
+    color: #000000;
+    font-size: 40px;
+    line-height: 20px;
+    font-family: Forum, serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.cabinet-stats {
+    display: flex;
+    gap: 20px;
+    width: 237px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.cabinet-stats-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats-content-number {
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.rented-books-title {
+    font-family: Inter, sans-serif;
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.rented-books-list {
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.card-number-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-number-title {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.card-number-id {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #BB945F;
+}
+
+.card-number-icon {
+    display: block;
+}
+
+
+/* Burger menu */
 .menu-toggle__line:nth-child(2) {
     top: 10px;
 }
@@ -118,7 +526,7 @@ header {
 }
 
 .navigation.active {
-    right: 0px;
+    right: 500px;
 }
 
 .nav-list {
@@ -143,6 +551,8 @@ main {
 
 .welcome {
     min-height: 570px;
+    max-width: 768px;
+    margin: 0 auto;
     background-image: linear-gradient(to bottom, #0c0c0e 0%, rgba(18, 18, 21, 0.00) 50%), url(./images/welcome-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -169,6 +579,8 @@ main {
 /* Секция About */
 .about {
     min-height: 862px;
+    max-width: 768px;
+    margin: 0 auto;
     background-color: #FFF;
     padding: 20px 77px 40px;
 }
@@ -304,7 +716,9 @@ main {
 .favourites {
     min-height: 2629px;
     background-color: #FFF;
-    padding: 0 20px;
+    padding: 0 50px;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .favourites-header {
@@ -482,6 +896,8 @@ main {
     min-height: 1481px;
     background-color: #FFF;
     padding: 15px 20px 40px;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .coffeeShop-header::after {
@@ -600,7 +1016,9 @@ main {
 .contacts {
     min-height: 1055px;
     background-color: #FFF;
-    padding: 0px 20px 40px;
+    padding: 0px 50px 40px;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .contacts-header {
@@ -666,8 +1084,10 @@ main {
 .library-card {
     min-height: 857px;
     background-color: #FFF;
-    padding: 0px 20px 40px;
+    padding: 0px 50px 40px;
     border: 0;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .library-card-form fieldset {
@@ -803,6 +1223,8 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 20px 20px 44px;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .top-part-footer {
@@ -871,4 +1293,23 @@ hr {
     height: 1px;
     background: #FFF;
     margin-top: 20px;
+}
+
+
+
+
+/* Для плавной анимации */
+.winter-books-list,
+.spring-books-list,
+.summer-books-list,
+.autumn-books-list {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Чтобы скрытые блоки не занимали место во время анимации */
+.visually-hidden {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
