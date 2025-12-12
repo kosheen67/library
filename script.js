@@ -208,107 +208,144 @@ const nextSlideButton = document.getElementById('nextSlide');
 let currentIndex1 = 0;
 const paginationButtons = document.querySelectorAll('.pagination-button');
 
+console.log(paginationButtons)
+
+// Функция для показа слайда по его номеру (индексу)
 function showSlide(index) {
+    console.log('Показываем слайд', index);
+
     slides.forEach(slide => {
-        slide.classList.remove('active', 'visually-hidden');
+        slide.classList.remove('active');
     });
-    slides[index].classList.add('active');
+
+    slides.forEach(slide => {
+        slide.classList.add('visually-hidden');
+    });
+
+
     slides[index].classList.remove('visually-hidden');
+    slides[index].classList.add('active');
     currentIndex1 = index;
+
     updatePagination(index);
 }
 
+//Функция с кликом по пагинации
+//Функция для обновления вида пагинации, смена класса 
 function updatePagination(activeIndex) {
-    paginationButtons.forEach(btn => btn.classList.remove('current'));
-    paginationButtons[activeIndex]?.classList.add('current');
+    paginationButtons.forEach((button) => {
+        button.classList.remove('current');
+    });
+    paginationButtons[activeIndex].classList.add('current');
 }
 
+//Функция для изменения картинки по клику на пагинацию
+function goToSlideOnPaginationClick(index) {
+    showSlide(index);
+}
+
+//Функция с кликом по стрелкам
+// Функция для показа следующей картинки
 function nextSlide() {
-    let newIndex = (currentIndex1 + 1) % slides.length;
+    let newIndex = currentIndex1 + 1;
+
+    if (newIndex >= slides.length) {
+        newIndex = 0;
+    }
     showSlide(newIndex);
 }
 
+// Функция для показа предыдущей картинки
 function prevSlide() {
-    let newIndex = (currentIndex1 - 1 + slides.length) % slides.length;
-    showSlide(newIndex);
+    let newIndex = currentIndex1 - 1;
+    if (newIndex < 0) {
+        newIndex = slides.length - 1;
+    }
+    showSlide(newIndex)
 }
 
-if (previousSlideButton) previousSlideButton.addEventListener('click', prevSlide);
-if (nextSlideButton) nextSlideButton.addEventListener('click', nextSlide);
+previousSlideButton.addEventListener('click', prevSlide);
+nextSlideButton.addEventListener('click', nextSlide);
 
 paginationButtons.forEach((button, index) => {
-    button.addEventListener('click', () => showSlide(index));
-});
-
-// 🔥🎉 Сезоны — книги
-const winterBooks = document.querySelector('.winter-books-list');
-const springBooks = document.querySelector('.spring-books-list');
-const summerBooks = document.querySelector('.summer-books-list');
-const autumnBooks = document.querySelector('.autumn-books-list');
-const radios = document.querySelectorAll('.seasons-input');
-
-const seasons = [
-    { element: winterBooks, value: 'winter' },
-    { element: springBooks, value: 'spring' },
-    { element: summerBooks, value: 'summer' },
-    { element: autumnBooks, value: 'autumn' }
-];
-
-if (winterBooks) winterBooks.classList.remove('visually-hidden');
-
-let autoSwitchActive = true;
-let currentIndex = 0;
-
-function autoSwitchSeason() {
-    if (!autoSwitchActive) return;
-    const current = seasons[currentIndex];
-    const nextIndex = (currentIndex + 1) % seasons.length;
-    const next = seasons[nextIndex];
-
-    if (!current?.element || !next?.element) return;
-
-    autoSwitchActive = false;
-    current.element.classList.remove('visually-hidden');
-    next.element.classList.remove('visually-hidden');
-
-    current.element.style.opacity = '1';
-    next.element.style.opacity = '0';
-    current.element.style.transition = 'opacity 0.5s';
-    next.element.style.transition = 'opacity 0.5s';
-
-    current.element.style.opacity = '0';
-
-    setTimeout(() => {
-        seasons.forEach(s => {
-            if (s.element && s.value !== next.value) {
-                s.element.classList.add('visually-hidden');
-                s.element.style.opacity = '';
-                s.element.style.transition = '';
-            }
-        });
-        next.element.style.opacity = '1';
-        currentIndex = nextIndex;
-        autoSwitchActive = true;
-        setTimeout(autoSwitchSeason, 3000);
-    }, 500);
-}
-
-setTimeout(() => {
-    if (autoSwitchActive) autoSwitchSeason();
-}, 3000);
-
-radios.forEach(radio => {
-    radio.addEventListener('change', () => {
-        autoSwitchActive = false;
-        seasons.forEach(s => {
-            if (s.element) s.element.classList.add('visually-hidden');
-        });
-        const selected = seasons.find(s => s.value === radio.value);
-        if (selected?.element) {
-            selected.element.classList.remove('visually-hidden');
-        }
+    button.addEventListener('click', function () {
+        goToSlideOnPaginationClick(index);
     });
 });
 
+
+//🔥🎉
+//Функция переключения анимации по сезонам: затухание и появление и клик по инпуту
+document.addEventListener('DOMContentLoaded', function () {
+    const winterBooks = document.querySelector('.winter-books-list');
+    const springBooks = document.querySelector('.spring-books-list');
+    const summerBooks = document.querySelector('.summer-books-list');
+    const autumnBooks = document.querySelector('.autumn-books-list');
+    const radios = document.querySelectorAll('.seasons-input');
+
+    // Если не все элементы найдены — выходим
+    if (!winterBooks || !springBooks || !summerBooks || !autumnBooks || radios.length === 0) {
+        return;
+    }
+
+    const seasons = [
+        { element: winterBooks, value: 'winter' },
+        { element: springBooks, value: 'spring' },
+        { element: summerBooks, value: 'summer' },
+        { element: autumnBooks, value: 'autumn' }
+    ];
+
+    let currentIndex = 0;
+    let autoSwitchActive = true;
+
+    // ✅ Исправленная функция: сбрасывает opacity
+    function showSeason(index) {
+        seasons.forEach((s, i) => {
+            if (i === index) {
+                s.element.classList.add('active-season');
+                // 🔥 Сбрасываем инлайн-стиль, чтобы CSS снова работал
+                s.element.style.opacity = '';
+            } else {
+                s.element.classList.remove('active-season');
+            }
+        });
+        currentIndex = index;
+    }
+
+    function autoSwitchSeason() {
+        if (!autoSwitchActive) return;
+        const nextIndex = (currentIndex + 1) % seasons.length;
+        autoSwitchActive = false;
+
+        // Затухание текущего
+        seasons[currentIndex].element.style.opacity = '0';
+
+        setTimeout(() => {
+            showSeason(nextIndex);
+            autoSwitchActive = true;
+            setTimeout(autoSwitchSeason, 3000);
+        }, 500);
+    }
+
+    setTimeout(() => {
+        if (autoSwitchActive) autoSwitchSeason();
+    }, 3000);
+
+    // Обработка ручного выбора
+    radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            autoSwitchActive = false;
+            const index = seasons.findIndex(s => s.value === radio.value);
+            if (index !== -1) {
+                seasons[currentIndex].element.style.opacity = '0';
+                setTimeout(() => {
+                    showSeason(index);
+                }, 200);
+            }
+        });
+    });
+});
+
+
 // Для отладки
-console.log(localStorage);
+localStorage.clear()

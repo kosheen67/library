@@ -526,7 +526,7 @@ header {
 }
 
 .navigation.active {
-    right: 500px;
+    right: 30%;
 }
 
 .nav-list {
@@ -719,6 +719,29 @@ main {
     padding: 0 50px;
     max-width: 768px;
     margin: 0 auto;
+    position: relative;
+}
+
+.favourites>ul {
+    position: absolute;
+    top: 210px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.favourites>ul.active-season {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Скрытый список — невидим и не кликабелен */
+.hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
 }
 
 .favourites-header {
