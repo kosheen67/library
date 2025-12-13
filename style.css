@@ -1415,7 +1415,7 @@ hr {
 }
 
 /*Для планшетов и компьютеров*/
-@media (min-width: 769px) {
+@media (min-width: 800px) {
     .container {
         padding: 0 20px;
         max-width: 1480px;
@@ -1478,16 +1478,41 @@ hr {
     .favourites {
         width: 100%;
         max-width: 1440px;
+        min-height: 1680px;
+    }
+
+    .favourites>ul {
+        min-width: 1400px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 220px;
+        margin-left: 20px;
     }
 
     .coffeeShop {
         width: 100%;
         max-width: 1440px;
+        min-height: 840px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 480px;
+        min-height: 840px;
     }
 
     .contacts {
         width: 100%;
         max-width: 1440px;
+        min-height: 575px;
+    }
+
+    .contacts-wrapper {
+        display: flex;
+        flex-direction: row;
+        min-height: 0px;
     }
 
     .library-card {
