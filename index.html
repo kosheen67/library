@@ -17,16 +17,25 @@
 <body>
 	<div class="container">
 		<header class="header">
-			<h1 class="header-title">Brooklyn Public Library</h1>
-			<span class="visually-hidden"></span>
-
+			<h1 class="header-title"><a href="#">Brooklyn Public Library</a></h1>
+			<nav>
+				<ul class="navigation-list-full-screen">
+					<li class="list-item-full-screen"><a class="list-item-link" href="#about">About</a>
+					</li>
+					<li class="list-item-full-screen"><a class="list-item-link" href="#favourites">Favorites</a></li>
+					<li class="list-item-full-screen"><a class="list-item-link" href="#coffeeShop">Coffee Shop</a></li>
+					<li class="list-item-full-screen"><a class="list-item-link" href="#contacts">Contacts</a></li>
+					<li class="list-item-full-screen"><a class="list-item-link" href="#library-card">Library Card</a>
+					</li>
+				</ul>
+			</nav>
 			<!-- Иконка профиля или текст -->
 			<div class="profile-trigger">
-				<svg class='icon-profile' width="28" height="28" viewBox="0 0 28 28" fill="none"
+				<svg class='icon-profile' width="28" height="28" viewBox="0 0 28 28" fill="currentColor"
 					xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
 						d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
-						fill="white" />
+						fill="currentColor" />
 				</svg>
 			</div>
 
@@ -191,498 +200,519 @@
 					</div>
 				</div>
 			</div>
-	</div>
 
 
 
-	<!-- Навигация -->
-	<nav class="navigation" id="mainNav">
-		<ul class="nav-list">
-			<li class="list-item">
-				<a class="list-item-link" href="#about">About</a>
-			</li>
-			<li class="list-item">
-				<a class="list-item-link" href="#">Favorites</a>
-			</li>
-			<li class="list-item">
-				<a class="list-item-link" href="#">Coffee Shop</a>
-			</li>
-			<li class="list-item">
-				<a class="list-item-link" href="#">Contacts</a>
-			</li>
-			<li class="list-item"><a class="list-item-link" href="#">Library Card</a></li>
-		</ul>
-	</nav>
-	</header>
-	<main class="main-page">
-		<!-- Секция Welcome -->
-		<section class="welcome">
-			<h2 class="text-welcome">
-				welcome <br>to the brooklyn <br>library
-			</h2>
-		</section>
-
-		<!-- Cекция About -->
-		<section class="about" id="about">
-			<h2 class="about-header">About</h2>
-			<p class="about-text">
-				The Brooklyn Library is a free workspace, a large number of books
-				and a cozy coffee shop inside
-			</p>
-			<div class="about-gallery">
-				<button class="left-arrow slider-arrow" type="button" aria-label="Предыдущее изображение"
-					id="prevSlide">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-						<path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round">
-						</path>
-					</svg>
-				</button>
-
-				<!-- Контейнер для изображений -->
-				<div class="about-images">
-					<img class="slide active" data-index="0" src="./images/image1.png" alt="girl in the library">
-					<img class="slide visually-hidden" data-index="1" src="./images/image2.png"
-						alt="monuments in the library">
-					<img class="slide visually-hidden" data-index="2" src="./images/image3.png"
-						alt="a lot of books on the shelves">
-					<img class="slide visually-hidden" data-index="3" src="./images/image4.jpg"
-						alt="books with a ladder">
-					<img class="slide visually-hidden" data-index="4" src="./images/image5.jpg" alt="library building">
-				</div>
-
-				<button class="right-arrow slider-arrow" type="button" aria-label="Следующее изображение"
-					id="nextSlide">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-						<path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round">
-						</path>
-					</svg>
-				</button>
-			</div>
-
-			<div class="pagination-wrapper" aria-label="Навигация по изображениям">
-				<div class="button-wrapper">
-					<button class="pagination-button current" type="button" data-index="0"
-						aria-label="Перейти к изображению 1" aria-selected="true">
-					</button>
-				</div>
-				<div class="button-wrapper">
-					<button class="pagination-button" type="button" data-index="1" aria-label="Перейти к изображению 2"
-						aria-selected="false">
-					</button>
-				</div>
-				<div class="button-wrapper">
-					<button class="pagination-button" type="button" data-index="2" aria-label="Перейти к изображению 3"
-						aria-selected="false">
-					</button>
-				</div>
-				<div class="button-wrapper">
-					<button class="pagination-button" type="button" data-index="3" aria-label="Перейти к изображению 4"
-						aria-selected="false">
-					</button>
-				</div>
-				<div class="button-wrapper">
-					<button class="pagination-button" type="button" data-index="4" aria-label="Перейти к изображению 5"
-						aria-selected="false">
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<!--Секция Favourite books -->
-		<section class="favourites">
-			<h2 class="favourites-header">Favourites</h2>
-			<p class="fav-paragraph">Pick favourites of season</p>
-			<div class="seasons">
-				<label class="seasons-label">
-					<input class="seasons-input" type="radio" name="season" value="winter" checked><span>Winter</span>
-				</label>
-				<label class="seasons-label">
-					<input class="seasons-input" type="radio" name="season" value="spring"><span>Spring</span>
-				</label>
-				<label class="seasons-label">
-					<input class="seasons-input" type="radio" name="season" value="summer"><span>Summer</span>
-				</label>
-				<label class="seasons-label">
-					<input class="seasons-input" type="radio" name="season" value="autumn"><span>Autumn</span>
-				</label>
-			</div>
-
-			<!-- Winter books -->
-			<ul class="winter-books-list active-season">
-				<li class="winter-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="winter-books-header">The Book Eaters</h3>
-					<h4 class="winter-books-author">By Sunyi Dean</h4>
-					<p class="winter-books-description">An unusual sci-fi story about a book eater woman who tries
-						desperately to
-						save her dangerous mind-eater son from tradition and certain death. Complete with
-						dysfunctional family
-						values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of
-						heart.</p>
-					<img class="winter-books-image" width="200" height="300" src="./images/winterBooks/book-eaters.png"
-						alt="The Book Eaters cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="winter-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="winter-books-header">Cackle</h3>
-					<h4 class="winter-books-author">By Rachel Harrison</h4>
-					<p class="winter-books-description">Are your Halloween movies of choice The Witches of Eastwick
-						and Practical
-						Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint
-						town in
-						upstate New York and befriends a beautiful witch.</p>
-					<img class="winter-books-image" width="200" height="300" src="./images/winterBooks/cackle.png"
-						alt="The Cackle cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="winter-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="winter-books-header">Dante: Poet of the Secular World</h3>
-					<h4 class="winter-books-author">By Erich Auerbach</h4>
-					<p class="winter-books-description">Auerbach's engaging book places the 'Comedy' within the
-						tradition of epic,
-						tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
-						individual and
-						his drama of soul into something of divine significance—an inspired introduction to Dante's
-						main themes.</p>
-					<img class="winter-books-image" width="200" height="300" src="./images/winterBooks/poet.png"
-						alt="Dante: Poet of the Secular World cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="winter-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="winter-books-header">The Last Queen</h3>
-					<h4 class="winter-books-author">By Clive Irving</h4>
-					<p class="winter-books-description">A timely and revelatory new biography of Queen Elizabeth
-						(and her family)
-						exploring how the Windsors have evolved and thrived as the modern world has changed around
-						them.</p>
-					<img class="winter-books-image" width="200" height="300" src="./images/winterBooks/lastqueen.png"
-						alt="The Last Queen cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-			</ul>
-
-			<!-- Spring books -->
-			<ul class="spring-books-list">
-				<li class="spring-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="spring-books-header">The Body</h3>
-					<h4 class="spring-books-author">By Stephen King</h4>
-					<p class="spring-books-description">Powerful novel that takes you back to a nostalgic time,
-						exploring both the beauty and danger and loss of innocence that is youth.</p>
-					<img class="spring-books-image" width="200" height="300" src="./images/springBooks/theBody.jpg"
-						alt="The Book Eaters cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="spring-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="spring-books-header">Carry: A Memoir of Survival on Stolen Land</h3>
-					<h4 class="spring-books-author">By Toni Jenson</h4>
-					<p class="spring-books-description">This memoir about the author's relationship with gun
-						violence feels both expansive and intimate, resulting in a lyrical indictment of the way
-						things are.</p>
-					<img class="spring-books-image" width="200" height="300" src="./images/springBooks/carry.jpg"
-						alt="The Carry: A Memoir of Survival on Stolen Land cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="spring-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="spring-books-header">Days of Distraction</h3>
-					<h4 class="spring-books-author">By Alexandra Chang</h4>
-					<p class="spring-books-description">A sardonic view of Silicon Valley culture, a meditation on
-						race, and a journal of displacement and belonging, all in one form-defying package of spare
-						prose.</p>
-					<img class="spring-books-image" width="200" height="300" src="./images/springBooks/days.jpg"
-						alt="The Days of Distraction cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="spring-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="spring-books-header">Dominicana</h3>
-					<h4 class="spring-books-author">By Angie Cruz</h4>
-					<p class="spring-books-description">A fascinating story of a teenage girl who marries a man
-						twice her age with the promise to bring her to America. Her marriage is an opportunity for
-						her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
-					<img class="spring-books-image" width="200" height="300" src="./images/springBooks/dominicana.jpg"
-						alt="The Dominicana cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-			</ul>
-
-			<!-- Summer books -->
-			<ul class="summer-books-list">
-				<li class="summer-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="summer-books-header">Crude: A Memoir</h3>
-					<h4 class="summer-books-author">By Pablo Fajardo & ​​Sophie Tardy-Joubert</h4>
-					<p class="summer-books-description">Drawing and color by Damien Roudeau | This book illustrates
-						the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco
-						company for damage their oil fields did to the Amazon and her people</p>
-					<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/memoir.jpg"
-						alt="The Crude: A Memoir cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="summer-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="summer-books-header">Let My People Go Surfing</h3>
-					<h4 class="summer-books-author">By Yvon Chouinard</h4>
-					<p class="summer-books-description">Chouinard—climber, businessman, environmentalist—shares
-						tales of courage and persistence from his experience of founding and leading Patagonia, Inc.
-						Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10
-						More Years of Business Unusual.</p>
-					<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/letMyPeople.jpg"
-						alt="The Let My People Go Surfing cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="summer-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="summer-books-header">The Octopus Museum: Poems</h3>
-					<h4 class="summer-books-author">By Brenda Shaughnessy</h4>
-					<p class="summer-books-description">This collection of bold and scathingly beautiful feminist
-						poems imagines what comes after our current age of environmental destruction, racism,
-						sexism, and divisive politics.</p>
-					<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/octopus.jpg"
-						alt="The The Octopus Museum: Poems cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="summer-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="summer-books-header">Shark Dialogues: A Novel</h3>
-					<h4 class="summer-books-author">By Kiana Davenport</h4>
-					<p class="summer-books-description">An epic saga of seven generations of one family encompasses
-						the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters
-						together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and
-						healers.</p>
-					<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/shark.jpg"
-						alt="The Shark Dialogues: A Novel cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-			</ul>
-
-			<!-- Autumn books -->
-			<ul class="autumn-books-list">
-				<li class="autumn-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="autumn-books-header">Casual Conversation</h3>
-					<h4 class="autumn-books-author">By Renia White</h4>
-					<p class="autumn-books-description">White's impressive debut collection takes readers through
-						and beyond the concepts of conversation and the casual - both what we say to each other and
-						what we don't, examining the possibilities around how we construct and communicate identity.
-					</p>
-					<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/casual.jpg"
-						alt="The Casual Conversation cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="autumn-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="autumn-books-header">The Great Fire</h3>
-					<h4 class="autumn-books-author">By Lou Ureneck</h4>
-					<p class="autumn-books-description">The harrowing story of an ordinary American and a principled
-						Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort
-						that saved a quarter of a million refugees from the Armenian Genocide</p>
-					<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/fire.jpg"
-						alt="The Great Fire cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="autumn-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="autumn-books-header">Rickey: The Life and Legend</h3>
-					<h4 class="autumn-books-author">By Howard Bryant</h4>
-					<p class="autumn-books-description">With the fall rolling around, one can't help but think of
-						baseball's postseason coming up! And what better way to prepare for it than reading the
-						biography of one of the game's all-time greatest performers, the Man of Steal, Rickey
-						Henderson?
-					</p>
-					<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/rickey.jpg"
-						alt="The Rickey: The Life and Legend cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-				<li class="autumn-books">
-					<p class="staff-picks">Staff Picks</p>
-					<h3 class="autumn-books-header">Slug: And Other Stories</h3>
-					<h4 class="autumn-books-author">By Megan Milks</h4>
-					<p class="autumn-books-description">Exes Tegan and Sara find themselves chained together by
-						hairballs of codependency. A father and child experience the shared trauma of giving birth
-						to gods from their wounds.
-					</p>
-					<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/slug.jpg"
-						alt="The Slug: And Other Stories cover">
-					<button class="favourites-button" type="button">Buy</button>
-				</li>
-			</ul>
-		</section>
-
-		<!-- Section Coffee Shop -->
-		<section class="coffeeShop">
-			<h2 class="coffeeShop-header">Coffee Shop</h2>
-			<p class="coffeeShop-text">
-				In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
-				friendly
-				conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best
-				coffee, and
-				also you can try desserts from bakery.
-			</p>
-			<div class="menu">
-				<div class="menu-category drinks">
-					<ul class="menu-category-list">
-						<li class="category-list-item">
-							<h3 class="header-drinks">Coffee &amp; Tea</h3>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Cold Brew Coffee</span>
-							<span class="drink-price">$3</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">French Press Pot</span>
-							<span class="drink-price">$5</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Espresso</span>
-							<span class="drink-price">$2</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Cappuccino</span>
-							<span class="drink-price">$4</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Hot Tea</span>
-							<span class="drink-price">$2</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Cold Tea</span>
-							<span class="drink-price">$2</span>
-						</li>
-					</ul>
-				</div>
-				<div class="menu-category desserts">
-					<ul class="menu-category-list right-text">
-						<li class="category-list-item">
-							<h3 class="header-desserts">Desserts &amp; Cakes</h3>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Forest Gateau</span>
-							<span class="drink-price">$16</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Blue Moon</span>
-							<span class="drink-price">$16</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Truffle Cake</span>
-							<span class="drink-price">$15</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Chocolate Cake</span>
-							<span class="drink-price">$18</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Poet’s Dream Cake</span>
-							<span class="drink-price">$16</span>
-						</li>
-						<li class="category-list-item">
-							<span class="drink">Pineapple Cake</span>
-							<span class="drink-price">$14</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<!-- Section Contacts -->
-		<section class="contacts">
-			<h2 class="contacts-header">Our Contacts</h2>
-			<div class="contacts-wrapper">
-				<ul class="contacts-text-list">
-					<li class="contacts-text-item"><b>For all Library inquiries:</b></li>
-					<li class="contacts-text-item">
-						<span>Please call <a class="tel-link" href="tel:6177302370">(617)
-								730-2370</a>
-						</span>
-						<span>For TTY service, please call <a class="tel-link" href="tel:6177302370">(617)
-								730-2370</a><br>
-						</span>
-						<span>Putterham Library: <a class="tel-link" href="tel:6177302385">(617)
-								730-2385</a><br>
-						</span>
+			<!-- Навигация -->
+			<nav class="navigation" id="mainNav">
+				<ul class="nav-list">
+					<li class="list-item">
+						<a class="list-item-link" href="#about">About</a>
 					</li>
-					<li class="contacts-text-item">
-						<span><b>Senior Staff</b></span>
-						<span>Library Director: <a class="mail-link" href="mailto:AmandaHirst@gmail.com"><b>Amanda
-									Hirst</b></a></span>
+					<li class="list-item">
+						<a class="list-item-link" href="#favourites">Favorites</a>
+					</li>
+					<li class="list-item">
+						<a class="list-item-link" href="#coffeeShop">Coffee Shop</a>
+					</li>
+					<li class="list-item">
+						<a class="list-item-link" href="#contacts">Contacts</a>
+					</li>
+					<li class="list-item"><a class="list-item-link" href="#library-card">Library Card</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="main-page">
+			<!-- Секция Welcome -->
+			<section class="welcome">
+				<h2 class="text-welcome">
+					welcome <br>to the brooklyn <br>library
+				</h2>
+			</section>
+
+			<!-- Cекция About -->
+			<section class="about" id="about">
+				<h2 class="about-header">About</h2>
+				<p class="about-text">
+					The Brooklyn Library is a free workspace, a large number of books
+					and a cozy coffee shop inside
+				</p>
+				<div class="about-gallery">
+					<button class="left-arrow slider-arrow" type="button" aria-label="Предыдущее изображение"
+						id="prevSlide">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+							<path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round"
+								stroke-linejoin="round">
+							</path>
+						</svg>
+					</button>
+
+					<!-- Контейнер для изображений -->
+					<div class="about-images">
+						<img class="slide active" data-index="0" src="./images/image1.png" alt="girl in the library">
+						<img class="slide visually-hidden" data-index="1" src="./images/image2.png"
+							alt="monuments in the library">
+						<img class="slide visually-hidden" data-index="2" src="./images/image3.png"
+							alt="a lot of books on the shelves">
+						<img class="slide visually-hidden" data-index="3" src="./images/image4.jpg"
+							alt="books with a ladder">
+						<img class="slide visually-hidden" data-index="4" src="./images/image5.jpg"
+							alt="library building">
+					</div>
+
+					<button class="right-arrow slider-arrow" type="button" aria-label="Следующее изображение"
+						id="nextSlide">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+							<path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round"
+								stroke-linejoin="round">
+							</path>
+						</svg>
+					</button>
+				</div>
+
+				<div class="pagination-wrapper" aria-label="Навигация по изображениям">
+					<div class="button-wrapper">
+						<button class="pagination-button current" type="button" data-index="0"
+							aria-label="Перейти к изображению 1" aria-selected="true">
+						</button>
+					</div>
+					<div class="button-wrapper">
+						<button class="pagination-button" type="button" data-index="1"
+							aria-label="Перейти к изображению 2" aria-selected="false">
+						</button>
+					</div>
+					<div class="button-wrapper">
+						<button class="pagination-button" type="button" data-index="2"
+							aria-label="Перейти к изображению 3" aria-selected="false">
+						</button>
+					</div>
+					<div class="button-wrapper">
+						<button class="pagination-button" type="button" data-index="3"
+							aria-label="Перейти к изображению 4" aria-selected="false">
+						</button>
+					</div>
+					<div class="button-wrapper">
+						<button class="pagination-button" type="button" data-index="4"
+							aria-label="Перейти к изображению 5" aria-selected="false">
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!--Секция Favourite books -->
+			<section class="favourites" id="favourites">
+				<h2 class="favourites-header">Favourites</h2>
+				<p class="fav-paragraph">Pick favourites of season</p>
+				<div class="seasons">
+					<label class="seasons-label">
+						<input class="seasons-input" type="radio" name="season" value="winter"
+							checked><span>Winter</span>
+					</label>
+					<label class="seasons-label">
+						<input class="seasons-input" type="radio" name="season" value="spring"><span>Spring</span>
+					</label>
+					<label class="seasons-label">
+						<input class="seasons-input" type="radio" name="season" value="summer"><span>Summer</span>
+					</label>
+					<label class="seasons-label">
+						<input class="seasons-input" type="radio" name="season" value="autumn"><span>Autumn</span>
+					</label>
+				</div>
+
+				<!-- Winter books -->
+				<ul class="winter-books-list active-season">
+					<li class="winter-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="winter-books-header">The Book Eaters</h3>
+						<h4 class="winter-books-author">By Sunyi Dean</h4>
+						<p class="winter-books-description">An unusual sci-fi story about a book eater woman who tries
+							desperately to
+							save her dangerous mind-eater son from tradition and certain death. Complete with
+							dysfunctional family
+							values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of
+							heart.</p>
+						<img class="winter-books-image" width="200" height="300"
+							src="./images/winterBooks/book-eaters.png" alt="The Book Eaters cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="winter-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="winter-books-header">Cackle</h3>
+						<h4 class="winter-books-author">By Rachel Harrison</h4>
+						<p class="winter-books-description">Are your Halloween movies of choice The Witches of Eastwick
+							and Practical
+							Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint
+							town in
+							upstate New York and befriends a beautiful witch.</p>
+						<img class="winter-books-image" width="200" height="300" src="./images/winterBooks/cackle.png"
+							alt="The Cackle cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="winter-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="winter-books-header">Dante: Poet of the Secular World</h3>
+						<h4 class="winter-books-author">By Erich Auerbach</h4>
+						<p class="winter-books-description">Auerbach's engaging book places the 'Comedy' within the
+							tradition of epic,
+							tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+							individual and
+							his drama of soul into something of divine significance—an inspired introduction to Dante's
+							main themes.</p>
+						<img class="winter-books-image" width="200" height="300" src="./images/winterBooks/poet.png"
+							alt="Dante: Poet of the Secular World cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="winter-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="winter-books-header">The Last Queen</h3>
+						<h4 class="winter-books-author">By Clive Irving</h4>
+						<p class="winter-books-description">A timely and revelatory new biography of Queen Elizabeth
+							(and her family)
+							exploring how the Windsors have evolved and thrived as the modern world has changed around
+							them.</p>
+						<img class="winter-books-image" width="200" height="300"
+							src="./images/winterBooks/lastqueen.png" alt="The Last Queen cover">
+						<button class="favourites-button" type="button">Buy</button>
 					</li>
 				</ul>
-				<div class="contacts-map">
-					<img class="contacts-map-image" src="./images/contacts-map.jpg" alt="map with library adress"
-						width="696" height="414">
-				</div>
-			</div>
-		</section>
 
-		<!-- Section Library Card Form -->
-		<section class="library-card">
-			<h2 class="library-card-header">Digital Library Cards</h2>
-			<form class="library-card-form" action="#" method="post">
-				<fieldset>
-					<legend class="library-form-header">Find your Library card</legend>
-					<div class="form-content">
-						<div class="form-content-fields">
-							<h3 class="form-content-header">Brooklyn Public Library</h3>
-							<label for="readers-name">
-								<input class="readers-name" type="text" id="readers-name"
-									placeholder="Reader&#39;s name">
-							</label>
-							<label for="card-number">
-								<input class="card-number" type="text" id="card-number" placeholder="Card number">
-							</label>
-							<button class="check-card">Check the card</button>
-						</div>
+				<!-- Spring books -->
+				<ul class="spring-books-list">
+					<li class="spring-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="spring-books-header">The Body</h3>
+						<h4 class="spring-books-author">By Stephen King</h4>
+						<p class="spring-books-description">Powerful novel that takes you back to a nostalgic time,
+							exploring both the beauty and danger and loss of innocence that is youth.</p>
+						<img class="spring-books-image" width="200" height="300" src="./images/springBooks/theBody.jpg"
+							alt="The Book Eaters cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="spring-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="spring-books-header">Carry: A Memoir of Survival on Stolen Land</h3>
+						<h4 class="spring-books-author">By Toni Jenson</h4>
+						<p class="spring-books-description">This memoir about the author's relationship with gun
+							violence feels both expansive and intimate, resulting in a lyrical indictment of the way
+							things are.</p>
+						<img class="spring-books-image" width="200" height="300" src="./images/springBooks/carry.jpg"
+							alt="The Carry: A Memoir of Survival on Stolen Land cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="spring-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="spring-books-header">Days of Distraction</h3>
+						<h4 class="spring-books-author">By Alexandra Chang</h4>
+						<p class="spring-books-description">A sardonic view of Silicon Valley culture, a meditation on
+							race, and a journal of displacement and belonging, all in one form-defying package of spare
+							prose.</p>
+						<img class="spring-books-image" width="200" height="300" src="./images/springBooks/days.jpg"
+							alt="The Days of Distraction cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="spring-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="spring-books-header">Dominicana</h3>
+						<h4 class="spring-books-author">By Angie Cruz</h4>
+						<p class="spring-books-description">A fascinating story of a teenage girl who marries a man
+							twice her age with the promise to bring her to America. Her marriage is an opportunity for
+							her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
+						<img class="spring-books-image" width="200" height="300"
+							src="./images/springBooks/dominicana.jpg" alt="The Dominicana cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+				</ul>
+
+				<!-- Summer books -->
+				<ul class="summer-books-list">
+					<li class="summer-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="summer-books-header">Crude: A Memoir</h3>
+						<h4 class="summer-books-author">By Pablo Fajardo & ​​Sophie Tardy-Joubert</h4>
+						<p class="summer-books-description">Drawing and color by Damien Roudeau | This book illustrates
+							the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco
+							company for damage their oil fields did to the Amazon and her people</p>
+						<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/memoir.jpg"
+							alt="The Crude: A Memoir cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="summer-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="summer-books-header">Let My People Go Surfing</h3>
+						<h4 class="summer-books-author">By Yvon Chouinard</h4>
+						<p class="summer-books-description">Chouinard—climber, businessman, environmentalist—shares
+							tales of courage and persistence from his experience of founding and leading Patagonia, Inc.
+							Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10
+							More Years of Business Unusual.</p>
+						<img class="summer-books-image" width="200" height="300"
+							src="./images/summerBooks/letMyPeople.jpg" alt="The Let My People Go Surfing cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="summer-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="summer-books-header">The Octopus Museum: Poems</h3>
+						<h4 class="summer-books-author">By Brenda Shaughnessy</h4>
+						<p class="summer-books-description">This collection of bold and scathingly beautiful feminist
+							poems imagines what comes after our current age of environmental destruction, racism,
+							sexism, and divisive politics.</p>
+						<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/octopus.jpg"
+							alt="The The Octopus Museum: Poems cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="summer-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="summer-books-header">Shark Dialogues: A Novel</h3>
+						<h4 class="summer-books-author">By Kiana Davenport</h4>
+						<p class="summer-books-description">An epic saga of seven generations of one family encompasses
+							the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters
+							together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and
+							healers.</p>
+						<img class="summer-books-image" width="200" height="300" src="./images/summerBooks/shark.jpg"
+							alt="The Shark Dialogues: A Novel cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+				</ul>
+
+				<!-- Autumn books -->
+				<ul class="autumn-books-list">
+					<li class="autumn-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="autumn-books-header">Casual Conversation</h3>
+						<h4 class="autumn-books-author">By Renia White</h4>
+						<p class="autumn-books-description">White's impressive debut collection takes readers through
+							and beyond the concepts of conversation and the casual - both what we say to each other and
+							what we don't, examining the possibilities around how we construct and communicate identity.
+						</p>
+						<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/casual.jpg"
+							alt="The Casual Conversation cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="autumn-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="autumn-books-header">The Great Fire</h3>
+						<h4 class="autumn-books-author">By Lou Ureneck</h4>
+						<p class="autumn-books-description">The harrowing story of an ordinary American and a principled
+							Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort
+							that saved a quarter of a million refugees from the Armenian Genocide</p>
+						<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/fire.jpg"
+							alt="The Great Fire cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="autumn-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="autumn-books-header">Rickey: The Life and Legend</h3>
+						<h4 class="autumn-books-author">By Howard Bryant</h4>
+						<p class="autumn-books-description">With the fall rolling around, one can't help but think of
+							baseball's postseason coming up! And what better way to prepare for it than reading the
+							biography of one of the game's all-time greatest performers, the Man of Steal, Rickey
+							Henderson?
+						</p>
+						<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/rickey.jpg"
+							alt="The Rickey: The Life and Legend cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+					<li class="autumn-books">
+						<p class="staff-picks">Staff Picks</p>
+						<h3 class="autumn-books-header">Slug: And Other Stories</h3>
+						<h4 class="autumn-books-author">By Megan Milks</h4>
+						<p class="autumn-books-description">Exes Tegan and Sara find themselves chained together by
+							hairballs of codependency. A father and child experience the shared trauma of giving birth
+							to gods from their wounds.
+						</p>
+						<img class="autumn-books-image" width="200" height="300" src="./images/autumnBooks/slug.jpg"
+							alt="The Slug: And Other Stories cover">
+						<button class="favourites-button" type="button">Buy</button>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Section Coffee Shop -->
+			<section class="coffeeShop" id="coffeeShop">
+				<h2 class="coffeeShop-header">Coffee Shop</h2>
+				<p class="coffeeShop-text">
+					In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
+					friendly
+					conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best
+					coffee, and
+					also you can try desserts from bakery.
+				</p>
+				<div class="menu">
+					<div class="menu-category drinks">
+						<ul class="menu-category-list">
+							<li class="category-list-item">
+								<h3 class="header-drinks">Coffee &amp; Tea</h3>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Cold Brew Coffee</span>
+								<span class="drink-price">$3</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">French Press Pot</span>
+								<span class="drink-price">$5</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Espresso</span>
+								<span class="drink-price">$2</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Cappuccino</span>
+								<span class="drink-price">$4</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Hot Tea</span>
+								<span class="drink-price">$2</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Cold Tea</span>
+								<span class="drink-price">$2</span>
+							</li>
+						</ul>
 					</div>
-				</fieldset>
-			</form>
-
-			<div class="get-a-card">
-				<p class="get-a-card-header">Get a reader card</p>
-				<p class="get-a-card-text">You will be able to see a reader card after logging into account or you
-					can
-					register a new account</p>
-				<div class="get-a-card-buttons">
-					<button class="get-a-card-sign-up">Sign up</button>
-					<button class="get-a-card-log-in">Log in</button>
+					<div class="menu-category desserts">
+						<ul class="menu-category-list right-text">
+							<li class="category-list-item">
+								<h3 class="header-desserts">Desserts &amp; Cakes</h3>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Forest Gateau</span>
+								<span class="drink-price">$16</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Blue Moon</span>
+								<span class="drink-price">$16</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Truffle Cake</span>
+								<span class="drink-price">$15</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Chocolate Cake</span>
+								<span class="drink-price">$18</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Poet’s Dream Cake</span>
+								<span class="drink-price">$16</span>
+							</li>
+							<li class="category-list-item">
+								<span class="drink">Pineapple Cake</span>
+								<span class="drink-price">$14</span>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="top-part-footer">
-				<a class="library-address"
-					href="https://yandex.ru/maps/202/new-york/?ll=-73.992255%2C40.696827&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTQ4Nzc0OTg0EjVVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE5ldyBZb3JrLCBDYWRtYW4gUGxhemEgUGFyayIKDSz7k8IVHssiQg%2C%2C&amp;z=16.01">
-					<p class="left-text">286 Cadman Plaza, New York, NY 11238, United States</p>
-				</a>
-				<p class="right-text">Mon - Fri<br>
-					08:00 am - 07:00 pm</p>
-			</div>
-			<div class="middle-part-footer">
-				<div class="footer-icons">
-					<ul class="footer-icons">
-						<li class="footer-icon"><a href="https://twitter.com/"><img src="./images/twit.svg"
-									alt="icon of twitter"></a></li>
-						<li class="footer-icon"><a href="http://www.instagram.com/"><img src="./images/inst.svg"
-									alt="icon of instagram"></a></li>
-						<li class="footer-icon"><a href="https://ru-ru.facebook.com/"><img src="./images/fb.svg"
-									alt="icon of facebook"></a></li>
+			<!-- Section Contacts -->
+			<section class="contacts" id="contacts">
+				<h2 class="contacts-header">Our Contacts</h2>
+				<div class="contacts-wrapper">
+					<ul class="contacts-text-list">
+						<li class="contacts-text-item"><b>For all Library inquiries:</b></li>
+						<li class="contacts-text-item">
+							<span>Please call <a class="tel-link" href="tel:6177302370">(617)
+									730-2370</a>
+							</span>
+							<span>For TTY service, please call <a class="tel-link" href="tel:6177302370">(617)
+									730-2370</a><br>
+							</span>
+							<span>Putterham Library: <a class="tel-link" href="tel:6177302385">(617)
+									730-2385</a><br>
+							</span>
+						</li>
+						<li class="contacts-text-item">
+							<span><b>Senior Staff</b></span>
+							<span>Library Director: <a class="mail-link" href="mailto:AmandaHirst@gmail.com"><b>Amanda
+										Hirst</b></a></span>
+						</li>
 					</ul>
+					<div class="contacts-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24200.127733301128!2d-73.991298!3d40.695646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49b649b8c3%3A0x6342a2291cea2e!2zMjg2IENhZG1hbiBQbHogVywgQnJvb2tseW4sIE5ZIDExMjAxLCDQodCo0JA!5e0!3m2!1sru!2sru!4v1765594385898!5m2!1sru!2sru"
+							width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
 				</div>
+			</section>
 
-				<div class="right-text2">Sat - Sun<br>
-					10:00 am - 06:00 pm
+			<!-- Section Library Card Form -->
+			<section class="library-card" id="library-card">
+				<h2 class="library-card-header">Digital Library Cards</h2>
+				<form class="library-card-form" action="#" method="post">
+					<fieldset>
+						<legend class="library-form-header">Find your Library card</legend>
+						<div class="form-content">
+							<div class="form-content-fields">
+								<h3 class="form-content-header">Brooklyn Public Library</h3>
+								<label for="readers-name">
+									<input class="readers-name" type="text" id="readers-name"
+										placeholder="Reader&#39;s name">
+								</label>
+								<label for="card-number">
+									<input class="card-number" type="text" id="card-number" placeholder="Card number">
+								</label>
+								<button class="check-card">Check the card</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="get-a-card">
+					<p class="get-a-card-header">Get a reader card</p>
+					<p class="get-a-card-text">You will be able to see a reader card after logging into account or you
+						can
+						register a new account</p>
+					<div class="get-a-card-buttons">
+						<button class="get-a-card-sign-up">Sign up</button>
+						<button class="get-a-card-log-in">Log in</button>
+					</div>
 				</div>
-			</div>
-			<hr>
-		</footer>
-	</main>
+			</section>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<div class="top-part-footer">
+					<a class="library-address"
+						href="https://yandex.ru/maps/202/new-york/?ll=-73.992255%2C40.696827&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTQ4Nzc0OTg0EjVVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE5ldyBZb3JrLCBDYWRtYW4gUGxhemEgUGFyayIKDSz7k8IVHssiQg%2C%2C&amp;z=16.01">
+						<p class="left-text">286 Cadman Plaza, New York, NY 11238, United States</p>
+					</a>
+					<p class="right-text">Mon - Fri<br>
+						08:00 am - 07:00 pm</p>
+				</div>
+				<div class="middle-part-footer">
+					<div class="footer-icons">
+						<ul class="footer-icons">
+							<li class="footer-icon"><a href="https://twitter.com/">
+									<svg class="twitter-icon" width="24" height="24" viewBox="0 0 24 24"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M22.9912 3.95021C22.9913 3.77357 22.9446 3.60007 22.8558 3.44735C22.7671 3.29464 22.6394 3.16817 22.4859 3.08084C22.3324 2.9935 22.1584 2.94842 21.9818 2.95017C21.8052 2.95193 21.6322 3.00046 21.4804 3.09083C20.8951 3.43921 20.265 3.70601 19.6074 3.88383C18.6684 3.07806 17.4708 2.63713 16.2334 2.64164C14.876 2.6432 13.5723 3.17223 12.5976 4.11702C11.623 5.06181 11.0536 6.3484 11.0098 7.70512C8.33378 7.27838 5.90843 5.88164 4.19625 3.78126C4.09308 3.65609 3.96133 3.55757 3.81211 3.494C3.66288 3.43043 3.50056 3.40368 3.33883 3.41601C3.17719 3.42932 3.02122 3.4818 2.88442 3.56892C2.74762 3.65603 2.63409 3.77516 2.55367 3.91601C2.1412 4.63582 1.9043 5.44276 1.86222 6.27131C1.82014 7.09986 1.97406 7.92666 2.31148 8.68456L2.30953 8.68651C2.15788 8.77991 2.03272 8.91066 1.94603 9.06625C1.85935 9.22185 1.81403 9.39708 1.81441 9.57519C1.81257 9.72211 1.82139 9.86898 1.84078 10.0146C1.94292 11.2729 2.50056 12.4507 3.40914 13.3271C3.3475 13.4446 3.30988 13.5731 3.29848 13.7052C3.28708 13.8373 3.30212 13.9704 3.34273 14.0967C3.73884 15.3308 4.58123 16.3727 5.70504 17.0185C4.56328 17.46 3.33046 17.614 2.11519 17.4668C1.89026 17.4386 1.66242 17.4876 1.46904 17.6059C1.27566 17.7242 1.12822 17.9047 1.0509 18.1178C0.973592 18.3309 0.970999 18.5639 1.04355 18.7787C1.1161 18.9935 1.25949 19.1772 1.45019 19.2998C3.54028 20.646 5.97387 21.3617 8.45996 21.3613C11.2792 21.393 14.0299 20.4921 16.2842 18.7988C18.5385 17.1054 20.1699 14.7145 20.9248 11.998C21.2778 10.8146 21.4581 9.58648 21.46 8.35157C21.46 8.28614 21.46 8.21876 21.459 8.15138C21.9811 7.58831 22.3855 6.92668 22.6486 6.20527C22.9117 5.48387 23.0282 4.7172 22.9912 3.95021ZM19.6845 7.16212C19.5194 7.35746 19.4358 7.60891 19.4511 7.86427C19.4609 8.02927 19.4599 8.19527 19.4599 8.35157C19.4579 9.39511 19.3049 10.4329 19.0058 11.4326C18.3893 13.744 17.015 15.7817 15.1029 17.2192C13.1908 18.6568 10.8516 19.4111 8.45996 19.3613C7.60084 19.3616 6.74468 19.2606 5.90918 19.0606C6.97459 18.7172 7.97077 18.1879 8.85156 17.4971C9.01378 17.3693 9.13251 17.1945 9.19145 16.9967C9.25038 16.7988 9.24664 16.5875 9.18073 16.3918C9.11483 16.1961 8.98999 16.0257 8.82334 15.9038C8.65669 15.7819 8.4564 15.7145 8.24996 15.7109C7.41879 15.698 6.62509 15.363 6.03609 14.7764C6.18551 14.7481 6.33395 14.7129 6.48141 14.6709C6.69742 14.6094 6.88645 14.477 7.01807 14.295C7.14969 14.1131 7.21623 13.8921 7.20698 13.6677C7.19773 13.4433 7.11324 13.2285 6.96709 13.058C6.82095 12.8874 6.62167 12.7711 6.40133 12.7275C5.91887 12.6323 5.46487 12.427 5.07464 12.1277C4.68441 11.8284 4.36845 11.4432 4.15133 11.002C4.33206 11.0266 4.51394 11.0419 4.69625 11.0479C4.91283 11.0511 5.12484 10.9854 5.30162 10.8603C5.47841 10.7351 5.6108 10.5569 5.67965 10.3516C5.74563 10.1443 5.74223 9.92123 5.66998 9.7161C5.59772 9.51096 5.46055 9.33499 5.27926 9.21485C4.83941 8.92182 4.4791 8.52427 4.23061 8.0578C3.98213 7.59134 3.85322 7.07052 3.85543 6.54201C3.85543 6.47561 3.85738 6.4092 3.86129 6.34377C6.10255 8.43402 9.00961 9.66621 12.0703 9.82326C12.2248 9.82934 12.3786 9.80024 12.5202 9.73816C12.6618 9.67607 12.7875 9.58262 12.8877 9.46486C12.9869 9.34596 13.0571 9.20566 13.0928 9.05501C13.1286 8.90437 13.1289 8.74748 13.0937 8.5967C13.0365 8.35806 13.0073 8.11357 13.0068 7.86818C13.0077 7.01271 13.3479 6.19254 13.9528 5.58764C14.5577 4.98274 15.3779 4.64251 16.2334 4.64161C16.6735 4.64043 17.1091 4.7305 17.5127 4.90615C17.9162 5.0818 18.279 5.3392 18.5781 5.66212C18.6934 5.7862 18.8386 5.87871 18.9998 5.93085C19.161 5.98299 19.3328 5.99303 19.499 5.96001C19.9097 5.88006 20.3146 5.7724 20.7109 5.63775C20.4406 6.19072 20.0952 6.70369 19.6845 7.16212Z"
+											fill="currentColor" />
+									</svg>
+								</a></li>
+							<li class="footer-icon"><a href="http://www.instagram.com/"><svg width="20" height="20"
+										viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M15.34 3.46C15.1027 3.46 14.8707 3.53038 14.6733 3.66224C14.476 3.79409 14.3222 3.98151 14.2313 4.20078C14.1405 4.42005 14.1168 4.66133 14.1631 4.89411C14.2094 5.12689 14.3236 5.34071 14.4915 5.50853C14.6593 5.67635 14.8731 5.79064 15.1059 5.83694C15.3387 5.88324 15.5799 5.85948 15.7992 5.76866C16.0185 5.67783 16.2059 5.52402 16.3378 5.32668C16.4696 5.12935 16.54 4.89734 16.54 4.66C16.54 4.34174 16.4136 4.03652 16.1885 3.81147C15.9635 3.58643 15.6583 3.46 15.34 3.46ZM19.94 5.88C19.9206 5.0503 19.7652 4.2294 19.48 3.45C19.2257 2.78313 18.83 2.17928 18.32 1.68C17.8248 1.16743 17.2196 0.774176 16.55 0.53C15.7727 0.236161 14.9508 0.07721 14.12 0.0599999C13.06 -5.58794e-08 12.72 0 10 0C7.28 0 6.94 -5.58794e-08 5.88 0.0599999C5.04915 0.07721 4.22734 0.236161 3.45 0.53C2.78168 0.776649 2.17693 1.16956 1.68 1.68C1.16743 2.17518 0.774176 2.78044 0.53 3.45C0.236161 4.22734 0.07721 5.04915 0.0599999 5.88C-5.58794e-08 6.94 0 7.28 0 10C0 12.72 -5.58794e-08 13.06 0.0599999 14.12C0.07721 14.9508 0.236161 15.7727 0.53 16.55C0.774176 17.2196 1.16743 17.8248 1.68 18.32C2.17693 18.8304 2.78168 19.2234 3.45 19.47C4.22734 19.7638 5.04915 19.9228 5.88 19.94C6.94 20 7.28 20 10 20C12.72 20 13.06 20 14.12 19.94C14.9508 19.9228 15.7727 19.7638 16.55 19.47C17.2196 19.2258 17.8248 18.8326 18.32 18.32C18.8322 17.8226 19.2283 17.2182 19.48 16.55C19.7652 15.7706 19.9206 14.9497 19.94 14.12C19.94 13.06 20 12.72 20 10C20 7.28 20 6.94 19.94 5.88ZM18.14 14C18.1327 14.6348 18.0178 15.2637 17.8 15.86C17.6403 16.2952 17.3839 16.6884 17.05 17.01C16.7256 17.3405 16.3332 17.5964 15.9 17.76C15.3037 17.9778 14.6748 18.0927 14.04 18.1C13.04 18.15 12.67 18.16 10.04 18.16C7.41 18.16 7.04 18.16 6.04 18.1C5.38089 18.1123 4.72459 18.0109 4.1 17.8C3.68578 17.6281 3.31136 17.3728 3 17.05C2.66809 16.7287 2.41484 16.3352 2.26 15.9C2.01586 15.2952 1.88044 14.6519 1.86 14C1.86 13 1.8 12.63 1.8 10C1.8 7.37 1.8 7 1.86 6C1.86448 5.35106 1.98295 4.70795 2.21 4.1C2.38605 3.67791 2.65627 3.30166 3 3C3.30381 2.65617 3.67929 2.3831 4.1 2.2C4.70955 1.98004 5.352 1.86508 6 1.86C7 1.86 7.37 1.8 10 1.8C12.63 1.8 13 1.8 14 1.86C14.6348 1.86728 15.2637 1.98225 15.86 2.2C16.3144 2.36865 16.7223 2.64285 17.05 3C17.3777 3.30718 17.6338 3.68273 17.8 4.1C18.0223 4.70893 18.1373 5.35178 18.14 6C18.19 7 18.2 7.37 18.2 10C18.2 12.63 18.19 13 18.14 14ZM10 4.87C8.98581 4.87198 7.99496 5.17453 7.15265 5.73942C6.31035 6.30431 5.65438 7.1062 5.26763 8.04375C4.88089 8.98131 4.78072 10.0125 4.97979 11.0069C5.17886 12.0014 5.66824 12.9145 6.38608 13.631C7.10392 14.3474 8.01801 14.835 9.01286 15.0321C10.0077 15.2293 11.0387 15.1271 11.9755 14.7385C12.9123 14.35 13.7129 13.6924 14.2761 12.849C14.8394 12.0056 15.14 11.0142 15.14 10C15.1413 9.3251 15.0092 8.65661 14.7512 8.03296C14.4933 7.40931 14.1146 6.84281 13.6369 6.36605C13.1592 5.88929 12.5919 5.51168 11.9678 5.25493C11.3436 4.99818 10.6749 4.86736 10 4.87ZM10 13.33C9.34139 13.33 8.69757 13.1347 8.14995 12.7688C7.60234 12.4029 7.17552 11.8828 6.92348 11.2743C6.67144 10.6659 6.6055 9.99631 6.73398 9.35035C6.86247 8.70439 7.17963 8.11104 7.64533 7.64533C8.11104 7.17963 8.70439 6.86247 9.35035 6.73398C9.99631 6.6055 10.6659 6.67144 11.2743 6.92348C11.8828 7.17552 12.4029 7.60234 12.7688 8.14995C13.1347 8.69757 13.33 9.34139 13.33 10C13.33 10.4373 13.2439 10.8703 13.0765 11.2743C12.9092 11.6784 12.6639 12.0454 12.3547 12.3547C12.0454 12.6639 11.6784 12.9092 11.2743 13.0765C10.8703 13.2439 10.4373 13.33 10 13.33Z"
+											fill="currentColor" />
+									</svg>
+								</a></li>
+							<li class="footer-icon"><a href="https://ru-ru.facebook.com/"><svg width="11" height="20"
+										viewBox="0 0 11 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M8.51 3.32003H10.39V0.14003C9.47975 0.045377 8.56516 -0.00135428 7.65 2.98641e-05C4.93 2.98641e-05 3.07 1.66003 3.07 4.70003V7.32003H0V10.88H3.07V20H6.75V10.88H9.81L10.27 7.32003H6.75V5.05003C6.75 4.00003 7.03 3.32003 8.51 3.32003Z"
+											fill="currentColor" />
+									</svg></a></li>
+						</ul>
+					</div>
+
+					<div class="right-text2">Sat - Sun<br>
+						10:00 am - 06:00 pm
+					</div>
+				</div>
+				<hr>
+			</footer>
+		</main>
+	</div>
 	</div>
 	<script src="./script.js"></script>
 </body>

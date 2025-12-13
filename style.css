@@ -73,8 +73,28 @@ header {
     min-width: 300px;
 }
 
-.icon-profile {
+.header-title:hover {
+    color: #BB945F;
+    cursor: pointer;
+}
+
+.navigation-list-full-screen {
+    display: none;
+}
+
+/*Стили для иконки профиля*/
+.profile-trigger {
+    color: white;
+    display: inline-block;
     margin-right: 40px;
+    cursor: pointer;
+}
+
+.profile-trigger:hover {
+    color: #BB945F;
+}
+
+.icon-profile {
     cursor: pointer;
 }
 
@@ -83,7 +103,6 @@ header {
     width: 28px;
     height: 28px;
     background-color: #0C0C0E;
-    /* тёмный фон, как у Brooklyn Library */
     color: white;
     border-radius: 50%;
     display: flex;
@@ -103,6 +122,9 @@ header {
     height: 20px;
     display: block;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .menu-toggle__line,
@@ -116,6 +138,10 @@ header {
     background: white;
     margin: 0 auto;
     transition: all 0.3s ease;
+}
+
+.menu-toggle:hover .menu-toggle__line {
+    background: #BB945F;
 }
 
 /* Модальное окно профиля */
@@ -180,6 +206,10 @@ header {
 
 .profile-list-link {
     cursor: pointer;
+}
+
+.profile-list-link:hover {
+    color: #BB945F;
 }
 
 /* Модальное окно регистрации */
@@ -514,6 +544,10 @@ header {
     top: 20px;
 }
 
+.menu-toggle__line:hover {
+    cursor: pointer;
+}
+
 .navigation {
     display: block;
     color: white;
@@ -542,6 +576,11 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
+}
+
+.list-item-link:hover {
+    text-decoration: underline;
+    color: #BB945F;
 }
 
 main {
@@ -716,8 +755,8 @@ main {
 .favourites {
     min-height: 2629px;
     background-color: #FFF;
-    padding: 0 50px;
-    max-width: 768px;
+    padding: 0 20px;
+    width: 768px;
     margin: 0 auto;
     position: relative;
 }
@@ -789,7 +828,7 @@ main {
 }
 
 .seasons-label span {
-    padding-left: 20px;
+    padding-left: 13px;
     cursor: pointer;
 }
 
@@ -912,6 +951,10 @@ main {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
+}
+
+.favourites-button:hover {
+    background-color: #BB945F;
 }
 
 /* Coffee Shop section */
@@ -1089,6 +1132,12 @@ main {
     gap: 20px;
 }
 
+.contacts-map {
+    background-image: url('./images/contacts-map.jpg');
+    width: 696px;
+    height: 414px;
+}
+
 /* Section Library Card Form */
 .library-card-header {
     margin-top: 10px;
@@ -1164,6 +1213,14 @@ main {
     border-radius: 10px;
     background: #FFF;
     border: none;
+    color: #8E8E8E;
+    font-family: Forum, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    padding-left: 20px;
 }
 
 ::placeholder {
@@ -1196,6 +1253,10 @@ main {
     letter-spacing: 1px;
     margin-top: 43px;
     margin-left: 140px;
+}
+
+.check-card:hover {
+    background-color: #ffffff
 }
 
 .get-a-card-header {
@@ -1237,6 +1298,11 @@ main {
     min-width: 70px;
     min-height: 30px;
     box-sizing: border-box;
+}
+
+.get-a-card-sign-up:hover,
+.get-a-card-log-in:hover {
+    background-color: #BB945F;
 }
 
 /* Footer */
@@ -1301,6 +1367,8 @@ footer {
 
 .footer-icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-left: 0px;
 }
@@ -1309,6 +1377,15 @@ footer {
     width: 24px;
     height: 24px;
     list-style-type: none;
+}
+
+
+.footer-icon {
+    color: #F5EFDB
+}
+
+.footer-icon:hover {
+    color: #BB945F
 }
 
 hr {
@@ -1335,4 +1412,91 @@ hr {
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
+}
+
+/*Для планшетов и компьютеров*/
+@media (min-width: 769px) {
+    .container {
+        padding: 0 20px;
+        max-width: 1480px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 0 20px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .header-title {
+        margin-right: 450px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .navigation-list-full-screen {
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        color: white;
+        margin-right: 40px;
+        min-width: 585px;
+    }
+
+    .profile-trigger {
+        color: white;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .welcome {
+        padding: 0 20px;
+        max-width: 1440px;
+        min-height: 620px;
+        width: 100%;
+
+        background-image: linear-gradient(to bottom, #0c0c0e 0%, rgba(18, 18, 21, 0.00) 50%), url(./images/welcome-bg-big.jpg);
+        margin: 0 auto;
+    }
+
+    .about {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .right-arrow {
+        display: block;
+        margin-left: 1200px;
+        margin-top: -282px;
+    }
+
+    .favourites {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .coffeeShop {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .contacts {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .library-card {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 1440px;
+    }
 }
