@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    background-color: grey;
     overflow-x: hidden;
 }
 
@@ -69,7 +68,7 @@ header {
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 0.6px;
-    margin-right: 316px;
+    margin-right: 320px;
     min-width: 300px;
 }
 
@@ -86,7 +85,7 @@ header {
 .profile-trigger {
     color: white;
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -215,12 +214,14 @@ header {
 /* Модальное окно регистрации */
 .modal-register {
     display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     min-height: 382px;
     width: 250px;
-    position: absolute;
-    top: 30px;
-    right: 80px;
+    z-index: 1000;
 }
 
 .register-form {
@@ -296,10 +297,15 @@ header {
     background-color: #ffffff;
     min-height: 262px;
     width: 250px;
-    position: absolute;
+    /* position: absolute;
     top: 30px;
-    right: 80px;
+    right: 80px; */
     display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
 .modal-login__close {
@@ -1424,14 +1430,16 @@ hr {
     }
 
     header {
+        display: flex;
+        align-items: flex-start;
         padding: 0 20px;
         width: 100%;
+        max-width: 1440px;
         margin: 0 auto;
-        display: flex;
     }
 
     .header-title {
-        margin-right: 450px;
+        margin-right: 390px;
     }
 
     .menu-toggle {
@@ -1445,13 +1453,13 @@ hr {
         gap: 30px;
         color: white;
         margin-right: 40px;
-        min-width: 585px;
     }
 
     .profile-trigger {
         color: white;
         display: inline-block;
         margin-right: 10px;
+        align-self: center
     }
 
     .welcome {
@@ -1490,6 +1498,13 @@ hr {
         margin-left: 20px;
     }
 
+    .winter-books,
+    .spring-books,
+    .summer-books,
+    .autumn-books {
+        min-width: 550px;
+    }
+
     .coffeeShop {
         width: 100%;
         max-width: 1440px;
@@ -1499,8 +1514,19 @@ hr {
     .menu {
         display: flex;
         flex-direction: row;
-        gap: 480px;
-        min-height: 840px;
+        justify-content: space-between;
+        min-height: 560px;
+    }
+
+    .menu-category {
+        min-width: 438px;
+        min-height: 520px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .desserts {
+        align-self: flex-start;
     }
 
     .contacts {
@@ -1523,5 +1549,9 @@ hr {
     footer {
         width: 100%;
         max-width: 1440px;
+    }
+
+    hr {
+        width: 100%;
     }
 }

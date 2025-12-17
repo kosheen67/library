@@ -17,6 +17,15 @@ if (modalClose) {
 const registerClose = document.querySelector('.register-close-button');
 const registerModal = document.querySelector('.modal-register');
 
+// НОВАЯ КНОПКА: Sign up (get-a-card-sign-up)
+const signUpCardButton = document.querySelector('.get-a-card-sign-up');
+if (signUpCardButton && registerModal) {
+    signUpCardButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        registerModal.style.display = 'block';
+    });
+}
+
 if (registerMenuOpen) {
     registerMenuOpen.addEventListener('click', function () {
         registerModal.style.display = 'block';
@@ -77,6 +86,7 @@ if (registerForm) {
     });
 }
 
+
 //🔥🎉
 // Вход (Log In)
 const loginForm = document.querySelector('.login-form');
@@ -112,7 +122,17 @@ if (loginForm) {
     });
 }
 
-// Закрытие кабинета
+//🔥
+// Открытие модального окна входа по кнопке "Log in"
+const logInCardButton = document.querySelector('.get-a-card-log-in');
+if (logInCardButton && modalLogin) {
+    logInCardButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        modalLogin.style.display = 'block';
+    })
+}
+
+//🔥 Закрытие кабинета
 if (cabinetCloseButton) {
     cabinetCloseButton.addEventListener('click', function () {
         profileCabinetModal.style.display = 'none';
